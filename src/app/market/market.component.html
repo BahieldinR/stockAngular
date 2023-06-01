@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>Market</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let stock of stocks">
+                <td>{{ stock.stockName }}</td>
+                <td>{{ stock.stockPrice }}</td>
+                <td>{{ stock.stockQuantity }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="button" (click)="router.navigate(['/order'])">Create Order</button>
+</div>
